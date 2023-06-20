@@ -1,5 +1,15 @@
 <footer class="footer">
-   
+<div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <div class="search-baro">
+                        <input
+                            type="text"
+                            class="search-inputo"
+                            placeholder="Rechercher..."
+                        />
+                        <button class="monbouton">Cliquez ici</button>
+                    </div>
+                </div>
     </div>
     <div class="footer-mid">
         
@@ -35,6 +45,7 @@
         </ul>
 
     </div>
+    
 </footer>
 </html>
 

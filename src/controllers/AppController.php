@@ -120,7 +120,6 @@ class AppController extends Db
             $autonomie,
             $photo,
             $avis,
-            
             $prix,
             $_GET["id"]
         ]);

@@ -21,7 +21,7 @@ $quantity = App::calculerTotalPanier($panier);
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?=$title?></title>
 	<meta name="keyword" content="Projet E-commerce, Projet fin d'année, montre connecte, smartwatch, Marketplace, E-commerce, BDD. ">
-    <meta name="description" content="Synkro est un site E-commerce proposant une panoplie de montre dedstinés au sportif à vendre ! ">
+    <meta name="description" content="Optival Safety est un site E-commerce proposant une panoplie de montre dedstinés au sportif à vendre ! ">
 	<!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 	<!-- Tailwin -->
@@ -141,6 +141,14 @@ $quantity = App::calculerTotalPanier($panier);
 
 
 	</nav>
+	<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+    <li class="breadcrumb-item"><a href="#">Catégorie</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Page courante</li>
+  </ol>
+</nav>
+
 	</header>
 <?php
 //session message

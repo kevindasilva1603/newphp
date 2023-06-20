@@ -1,5 +1,5 @@
 /*------------------------------------------------------- Font ------------------------------------------------------------------ */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
     --main-bg-color: #000000;
@@ -258,7 +258,7 @@ iconify-icon {
     background-color: var(--main-bg-color);
     color: var(--blanc);
     font-family: var(--font-primary);
-    margin-top: 53px;
+    margin-top: 181px;
 }
 .footer > li {
     list-style-type: none;
@@ -274,7 +274,6 @@ iconify-icon {
     justify-content: center;
 }
 .newsletter {
-    display: flex;
     gap: 137px;
     align-items: center;
 }
@@ -326,7 +325,7 @@ input:focus {
 }
 
 .footer-mid {
-    margin-top: 40px;
+    margin-top: 90px;
     padding: 0 303px;
     display: flex;
     flex-direction: row;
@@ -349,7 +348,7 @@ input:focus {
 
 .footer-bottom {
     padding: 0 303px;
-    margin-top: 84px;
+    margin-top: 151px;
 }
 .footer-bottom ul {
     display: flex;
@@ -357,4 +356,459 @@ input:focus {
     justify-content: center;
     gap: 20px;
     font-size: 13px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 266px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 71px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.search-icon {
+    width: 20px;
+    margin: 5px;
+}
+
+.mon-bouton {
+    height: 59px;
+    width: 217px;
+    left: 893px;
+    top: 636px;
+    border-radius: 10px;
+    background-color: #261a21;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    font-weight: 600px;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.search-baro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 503px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 385px;
+}
+
+.search-inputo {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.monbouton {
+    width: 163.28px;
+    height: 46px;
+    left: 649.11px;
+    top: 1133px;
+    background: #000000;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 29px;
+    color: white;
+    text-align: center;
+}
+
+/*------------------------------------------------------- code en double ------------------------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+header {
+    background-color: black;
+    height: 109px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 139px;
+    margin-left: 67px; /* Ajuster l'espacement entre le logo et les icônes */
+}
+
+.svgi {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    width: 30px;
+    margin-top: 27px;
+    margin-right: 61px;
+    gap: 53px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 266px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 71px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.search-icon {
+    width: 20px;
+    margin: 5px;
+}
+
+.mon-bouton {
+    height: 59px;
+    width: 217px;
+    left: 893px;
+    top: 636px;
+    border-radius: 10px;
+    background-color: #261a21;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    font-weight: 600px;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.title {
+    height: 244px;
+    width: 306px;
+    left: 894px;
+    top: 392px;
+    position: absolute;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 94px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.sub {
+    height: 66px;
+    width: 502px;
+    left: 894px;
+    top: 514px;
+    position: absolute;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.ligne-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.ligne-gauche::before,
+.ligne-droite::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    border-top: 2px solid black;
+}
+
+.ligne-gauche::before {
+    right: 60%;
+}
+
+.ligne-droite::before {
+    left: 60%;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 50px;
+}
+
+.image-container {
+    width: 394px;
+    height: 165px;
+    left: 62px;
+    top: 95px;
+}
+
+.produit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.produit img {
+    width: 248px;
+    height: 165px;
+    height: auto;
+}
+
+.produit h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.produit .prix {
+    font-weight: bold;
+}
+
+.all-products {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 102px;
+}
+.bouton {
+    width: 183px;
+    height: 44px;
+    left: 170px;
+    top: 402px;
+    background: #261a21;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 33px;
+}
+
+.rond {
+    width: 43px;
+    height: 42px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.prix {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.all-contain {
+    margin-top: 20px;
+}
+
+.categorie {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 152px;
+}
+
+.before-footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 93px;
+}
+
+.produit .img-blocko {
+    width: 60%;
+}
+
+.prixo {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 29px;
+    text-align: center;
+    color: black;
+}
+
+.footer {
+    background-color: #1e1e1e;
+}
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 29px;
+    color: white;
+    margin-top: 30px;
+}
+
+.contenu {
+    display: flex;
+    align-items: center;
+}
+
+.photo {
+    margin-right: 20px;
+}
+
+.photo img {
+    width: 100%; /* Ajustez cette valeur en fonction de vos besoins */
+    height: auto;
+}
+
+.infos {
+    margin-right: 20%;
+}
+
+.infos h2 {
+    margin-bottom: 10px;
+}
+
+.infos hr {
+    border: none;
+    border-top: 2px solid black;
+    margin: 12px 0;
+    width: 155%;
+}
+
+.prix {
+    font-weight: bold;
+}
+
+.produititle {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+
+    text-align: center;
+}
+
+.back {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.center {
+    text-align: center;
+}
+
+.infoss {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%; /* Vous pouvez ajuster la largeur selon vos besoins */
+}
+
+.produititle {
+    font-size: 24px;
+}
+
+.ptitle {
+    font-size: 18px;
+}
+
+.prixI {
+    font-size: 14px;
+    text-align: center;
+}
+
+.hr-center {
+    width: calc(100% - 16px); /* Ajuste la largeur de la ligne horizontale */
+    height: 3px; /* Ajuste la hauteur de la ligne horizontale */
+    background-color: black; /* Couleur de la ligne horizontale */
+    margin: 10px 8px; /* Ajuste la marge selon vos besoins */
+}
+
+.inline {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.butttton {
+    display: flex;
+    margin-top: 40px;
+    gap: 30px;
 }

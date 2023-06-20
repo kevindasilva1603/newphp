@@ -2,9 +2,11 @@
 $title = "Produit";
 include VIEWS.'inc/header.php'; 
 ?>
+<?php
+var_dump($product)
+?>	
 
-
-			<h1 class="text-center my-5">Vous êtes au bon endroit pour vous enregistrez une montre !</h1>
+			<h1 class="text-center my-5">Vous êtes au bon endroit pour vous enregistrez des lunettes !</h1>
 	<?= isset($_SESSION["message"]) ? $_SESSION["message"] : ""; 
 
 			$_SESSION["message"] = "";
@@ -33,7 +35,7 @@ include VIEWS.'inc/header.php';
 	?>
 
         <select class="form-select" aria-label="Default select example" name="categorie">
-            <option value="">----Veuillez choisir votre categorie----</option>
+		<option value='1'>name</option>
             <?php foreach ($allCategorie as $value) { ?>
                 <option value='<?= $value["id_categorie"] ?>'><?= $value["name"] ?></option>
             <?php } ?>

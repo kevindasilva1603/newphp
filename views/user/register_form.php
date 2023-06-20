@@ -3,8 +3,6 @@ $title = "Inscription";
 include VIEWS.'inc/header.php'; 
 
 
-var_dump($user);
-
 
 ?>
 <?php
