@@ -1,6 +1,6 @@
 <?php
 
-class App extends db
+class App extends Db
 {
 	//fonction utile
 	public static function showArray(array $list) : void
@@ -42,7 +42,7 @@ class App extends db
 	{
 		session_destroy();
 		// unset($_SESSION['user']); // supprimer la session
-		header("Location:" . BASE_PATH . ""); // redirection page d'accueil
+		header("Location:" . BASE_PATH . "connection"); // redirection page d'accueil
 
 	}
 
@@ -80,6 +80,7 @@ public static function paiement(){
 			unset($_SESSION["message"]);
 			$_SESSION["message"] = "Il y a eu une erreur lors de l'ajout en bdd<br>";
 		}
+		unset($_SESSION['panier']);
 		unset($_SESSION["message"]);
 		$_SESSION["message"] .= "<div class=\"alert alert-danger w-50 mx-auto\" role=\"alert\">
                 Votre Paiement de " .$_POST['prx']. " € à bien été effectué ! consultez vos commande pour avoir le détail de votre commande.
@@ -106,6 +107,33 @@ public static function commande() {
 
 
 }
+public static function getBreadcrumbData($currentUrl)
+    {
+       // Tableau multidimensionnel contenant les informations des pages
 
+	   $pages = array(
+		'Accueil' => '&nbsp;',
+		'Catégorie' => 'Categorie'
+	);
+	if (isset($_GET['cat'])) {
+		$pages['Produits'] = 'Produit?id='.$_GET['cat'];
+	}
 	
+
+	// Vérification de correspondance et construction du fil d'Ariane
+	$breadcrumb = array();
+	foreach ($pages as $title => $url) {
+		if ($url == $currentUrl) {
+			$breadcrumb[$title] = '#';
+			break;
+		} else {
+			$breadcrumb[$title] = $url;
+		}
+	}
+
+	return $breadcrumb;
 }
+
+
+}
+	

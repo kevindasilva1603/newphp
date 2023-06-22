@@ -1,52 +1,38 @@
 <?php  
-$title = "Connection";
+$title = "S'identifier";
 include VIEWS.'inc/header.php'; 
 
 ?>
 
-<!-- <h1 class="text-center my-5">Vous êtes au bon endroit pour vous Connectez !</h1> -->
-	
-	<form method="post" action="login" >
-	
-	<section class="vh-100" style="background-color: #000000;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card shadow-2-strong" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
 
-            <h3 class="mb-5">Se connecter</h3>
+      <h1 class="connect">S'identifier</h1>
+<section class="formulaire-de-connection">
+
+	    <form method="post" action="login" class="form-sidentifier" >
             <?= isset($_SESSION["message"]) ? $_SESSION["message"] : ""; 
-
-            $_SESSION["message"] = "";
 ?>
-            <div class="form-outline mb-4">
-			<label class="form-label" for="typeEmailX-2">Email</label>
-              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" name="monemail" value="<?=!empty($_SESSION['email']) ? $_SESSION['email'] : "";?>">
-              
+<section>
+            <div class="email">
+              <label for="@"></label>
+              <input type="email"  class="input" name="monemail" value="<?=!empty($_SESSION['email']) ? $_SESSION['email'] : "";?>" placeholder="Votre Adresse email">
             </div>
 
-            <div class="form-outline mb-4">
-			<label class="form-label" for="typePasswordX-2">mot de passe</label>
-              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" name="monmdp" />
+            <div class="mdp">
+			        <label for="mdp"></label>
+              <input type="password" class="input" name="monmdp" value="<?=!empty($_SESSION['password']) ? $_SESSION['password'] : "";?>" placeholder="Votre mots de passe" />
+            </div>
+            </section>
 
+            <div class="submit-connect">
+
+            <input type="submit" class="btn-sidentifier" value="Se connecter" name="submit">
+            <input type="button" class="btn-sidentifier" value="S'enregistrer" onclick="window.location.href='inscription';">
 
             </div>
-            <a href="inscription" class="btn btn-secondary mt-3">S'enregistrer</a>
-			<input type="submit" class="btn btn-primary mt-3" value="Submit" name="submit">
-
-        </div>
-      </div>
-    </div>
-  </div>
+            
+  </form>
+  
 </section>
-
-	
-
-	
-
-</form>
-
 
 
 

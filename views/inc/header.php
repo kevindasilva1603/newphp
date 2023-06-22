@@ -15,13 +15,13 @@ $quantity = App::calculerTotalPanier($panier);
 ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
-  <head>
+<head>
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?=$title?></title>
 	<meta name="keyword" content="Projet E-commerce, Projet fin d'année, montre connecte, smartwatch, Marketplace, E-commerce, BDD. ">
-    <meta name="description" content="Optival Safety est un site E-commerce proposant une panoplie de montre dedstinés au sportif à vendre ! ">
+    <meta name="description" content="Synkro est un site E-commerce proposant une panoplie de montre dedstinés au sportif à vendre ! ">
 	<!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 	<!-- Tailwin -->
@@ -31,8 +31,12 @@ $quantity = App::calculerTotalPanier($panier);
 	<!-- iconify -->
 	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 	<!-- Javascript -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>	
+
 	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 	<script src="<?= ASSETS. "js/main.js"?>" defer></script>
+	<script src="<?= ASSETS. "js/swiper.js"?>" defer></script>
 
   </head>
 <header>
@@ -130,6 +134,7 @@ $quantity = App::calculerTotalPanier($panier);
 				<li class="item-nav">
 				<iconify-icon icon="ph:user" width="24" height="24"></iconify-icon><a class="link-nav" href="<?= BASE_PATH ?>connection">Se connecter</a>
 
+
 				<li class="item-nav">
 				<a class="link-nav" href="<?= BASE_PATH ?>inscription">S'enregistrer</a>
 
@@ -140,14 +145,7 @@ $quantity = App::calculerTotalPanier($panier);
 			?>
 
 
-	</nav>
-	<nav aria-label="Breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Accueil</a></li>
-    <li class="breadcrumb-item"><a href="#">Catégorie</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Page courante</li>
-  </ol>
-</nav>
+	
 
 	</header>
 <?php

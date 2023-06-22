@@ -5,14 +5,13 @@ class User extends Db
 	private $id_user; //
 	private $first_name;
 	private $last_name;
-	private $pp = "default-pp.png";
+	private $pp = 'default-pp.png';
 	private $pseudo;
 	private $mail;
 	private $password;
 	private $address;
 	private $numero;
 	private $date_creation; //
-	
 
 	public function createFromPost(array $dataFromPost)
 	{
@@ -53,17 +52,10 @@ class User extends Db
 
 	public function insertDb()
 	{
-		if (self::getDb()) {
-			// La connexion à la base de données est établie, exécuter la requête d'insertion ici
-		} else {
-			echo "Erreur de connexion à la base de données.";
-		}
 		
 		$query = "INSERT INTO user (`nom`,`prenom`,`pp`,`pseudo`,`email`,`password`,`adresse`,`numero`) VALUES (?,?,?,?,?,?,?,?)";
 
 		$requetePreparee = self::getDb()->prepare($query);
-		
-		
 		
 		$reponse = $requetePreparee->execute([
 			$this->getFirstName(),
@@ -74,7 +66,6 @@ class User extends Db
 			$this->getPassword(),
 			$this->getAddress(),
 			$this->getNumero()
-			
 		]);
 
 		if (!$reponse)
@@ -214,7 +205,7 @@ class User extends Db
 
 		$requetePreparee = self::getDb()->prepare($query);
 
-		$reponse = $requetePreparee->execute([
+		$requetePreparee->execute([
 
 		$_GET["id"]
 
@@ -228,7 +219,7 @@ class User extends Db
 
 	$query = "UPDATE `user` SET `nom`=?,`prenom`=?,`pp`=?,`pseudo`=?,`email`=?,`adresse`=?,`numero`=? WHERE `id_user` = ?";
 
-		$requetePreparee = self::getDb()->prepare($query);
+	$requetePreparee = self::getDb()->prepare($query);
 
 		$reponse = $requetePreparee->execute([
 		$_POST['nom'],
@@ -239,8 +230,9 @@ class User extends Db
 		$_POST['adresse'],
 		$_POST['numero'],
 		$_GET["id"]
-
 		]);
+
+
 
 		if ($reponse) {
 			//mise a jour de la session
@@ -266,6 +258,37 @@ class User extends Db
 
 	}
 
+	public static function commandes(){
+
+
+
+		$query = "SELECT * FROM `achat` WHERE `user_id`=?";
+
+		$requetePreparee = self::getDb()->prepare($query);
+
+		$reponse = $requetePreparee->execute([
+
+			$_GET['id']
+		]);
+
+		//verifie si la requete s'est bien déroulé
+		if (!$reponse)
+		{
+
+			$_SESSION["message"] .= "<div class=\"alert alert-danger w-50 mx-auto\" role=\"alert\">
+					Quelque chose ne s'est pas déroulé correctement pendant la requete
+				</div>";
+				return false;
+		}
+		
+		if ($reponse)
+		{
+			$commande = $requetePreparee->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		return $commande;
+
+	}
 	/**
 	 * Get the value of id_user
 	 */

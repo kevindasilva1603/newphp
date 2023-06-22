@@ -37,53 +37,56 @@ const COVER = '../../public/upload/';
  * Liste des actions/méthodes possibles (les routes du routeur)
  */
 
-$routes = [
-                            //INDEX
-    ''                  => ['AppController', 'index'],
 
-                //CREATE READ UPDATE DELETE ===> CRUD
-                            //USER
-    '/inscription'      => ['UserController', 'register'],//j'appelle la methode registre() qui est dans le fichier UserController
-    '/administration'      => ['UserController', 'showDb'],
-    '/supprimer'      => ['UserController', 'remove'],
-    '/modifier'      => ['UserController', 'modifier'],
-    '/enregistrement'     => ['AppController', 'enregistrement'],
-                            //CATEGORIES
-    '/categorie'      => ['CategorieController', 'showDb'],
-    '/enregistrement_cat'     => ['AppController', 'enregistrement_cat'],
-    '/ajouter_cat'      => ['CategorieController', 'register'],
-    '/supprimer_cat'      => ['CategorieController', 'remove'],
-    '/modifier_cat'      => ['CategorieController', 'modifier'],
+ $routes = [
+    //INDEX
+''                  => ['AppController', 'index'],
 
-                            //PRODUIT
-    '/produit'      =>      ['ProduitController', 'showDb'], // show list product
-    '/ajouter_prd'      => ['ProduitController', 'register'], // add product
-    '/supprimer_prd'      => ['ProduitController', 'remove'], // remove product
-    '/modifier_prd'      => ['ProduitController', 'modifier'], // select
-    '/enregistrement_prd'     => ['AppController', 'enregistrement_prd'], // update the select product
+//CREATE READ UPDATE DELETE ===> CRUD
+    //USER
+'/inscription'      => ['UserController', 'register'],//j'appelle la methode registre() qui est dans le fichier UserController
+'/administration'      => ['UserController', 'showDb'],
+'/supprimer'      => ['UserController', 'remove'],
+'/modifier'      => ['UserController', 'modifier'],
+'/enregistrement'     => ['AppController', 'enregistrement'],
+    //CATEGORIES
+'/categorie'      => ['CategorieController', 'showDb'],
+'/enregistrement_cat'     => ['AppController', 'enregistrement_cat'],
+'/ajouter_cat'      => ['CategorieController', 'register'],
+'/supprimer_cat'      => ['CategorieController', 'remove'],
+'/modifier_cat'      => ['CategorieController', 'modifier'],
+
+    //PRODUIT
+'/produit'      =>      ['ProduitController', 'showDb'], // show list product
+'/ajouter_prd'      => ['ProduitController', 'register'], // add product
+'/supprimer_prd'      => ['ProduitController', 'remove'], // remove product
+'/modifier_prd'      => ['ProduitController', 'modifier'], // select
+'/enregistrement_prd'     => ['AppController', 'enregistrement_prd'], // update the select product
 
 
-                            //LOGIN
+    //LOGIN
 
-    '/login'      => ['AppController', 'login'],
-    '/connection'      => ['UserController', 'connection'],
-    '/deconnexion'      => ['App', 'deconnexion'],
-    '/mon-profil'       => ['UserController','my_profil'],
-    '/my_profil_register' => ['UserController','my_profil_register'],
+'/login'      => ['AppController', 'login'],
+'/connection'      => ['UserController', 'connection'],
+'/deconnexion'      => ['App', 'deconnexion'],
+'/mon-profil'       => ['UserController','my_profil'],
+'/my_profil_register' => ['UserController','my_profil_register'] ,
 
-        //Affichage de mes categorie & produit en frontend
 
-    '/Categorie'      => ['CategorieController', 'fetchAllCategorie'], // show all categories (3 for me)
-    '/Produit'      => ['ProduitController', 'fetchAllProduct'], // show all product about 1 categorie
-    '/Produit_info'      => ['ProduitController', 'fetchOneProduct'], // show information about 1 product
+//Affichage de mes categorie & produit en frontend
 
-        //Gestion du panier
-    '/panier'      => ['PanierController', 'addcart_1'],
-    '/list_panier'      => ['PanierController', 'show_panier'],
-    '/supprimer_panier'      => ['PanierController', 'delete_panier'],
-        //Gestion du paiement
-    '/paiement'      => ['App', 'paiement'],
-    '/commande'      => ['App', 'commande'],
+'/Categorie'      => ['CategorieController', 'fetchAllCategorie'], // show all categories (3 for me)
+'/Produit'      => ['ProduitController', 'fetchAllProduct'], // show all product about 1 categorie
+'/Produit_info'      => ['ProduitController', 'fetchOneProduct'], // show information about 1 product
+
+//Gestion du panier
+'/panier'      => ['PanierController', 'addcart_1'],
+'/list_panier'      => ['PanierController', 'show_panier'],
+'/supprimer_panier'      => ['PanierController', 'delete_panier'],
+'/viderpanier'  => ['PanierController', 'vider_panier'],
+//Gestion du paiement
+'/paiement'      => ['App', 'paiement']
+// '/mon-profil'      => ['UserController', 'commandes']
 
 
 ];

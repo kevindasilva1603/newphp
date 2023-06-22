@@ -1,18 +1,10 @@
 <?php  
 $title = "Inscription";
 include VIEWS.'inc/header.php'; 
-
-
-
-?>
-<?php
-
-
 ?>
 
 
-
-			<h1 class="text-center my-5">Vous êtes au bon endroit pour vous enregistrez !</h1>
+			<h1 class="subscribe">Enregistrez-vous en toute confiance !</h1>
 	<?= isset($_SESSION["message"]) ? $_SESSION["message"] : ""; 
 
 			$_SESSION["message"] = "";
@@ -61,8 +53,13 @@ include VIEWS.'inc/header.php';
 		<label for="Number">Numéro de téléphone</label>
 	</div>
 
-	<input type="submit" class="btn btn-primary mt-3" value="Submit" name="submit">
-	<a href="connection" class="link-secondary">Se connecter</a>
+
+	<section class="buttons">
+	<input type="submit" class="btn" value="Submit" name="submit">
+	
+
+	<input type="button" class="btn-sidentifier" value="Se connecter" onclick="window.location.href='';">
+	</section>
 </form>
 
 <?php include VIEWS.'inc/footer.php'; ?>

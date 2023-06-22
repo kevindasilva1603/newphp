@@ -16,8 +16,6 @@ class UserController
 			{
 				$user = new User();
 
-
-
 				$user->createFromPost($_POST);
 
 				$user->insertDb();
@@ -94,5 +92,9 @@ class UserController
 		include VIEWS . "user/my_profil.php";
 	}
 	
+	public static function commandes(){
+		User::commandes();
+		include VIEWS . "user/my_profil.php";
+	}
 	
 }
