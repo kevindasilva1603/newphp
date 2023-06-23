@@ -10,29 +10,92 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
 <body>
     <main>
         <!-- le carousel  -->
-        <section class="first-carousel" id="carousel-section">
+        <section class="car">
+        <div class="wrapper">
             
-            <div class="swiper-wrapper">
-                <?php foreach ($imagePaths as $imagePath) : ?>
-                <div class="swiper-slide">
-                    <img src="<?= $imagePath ?>" alt="Image" height="500" width="100%">
+                <div class="carousel">
+                    <section>
+                        <div class="container">
+                        <img class="img-block" src="<?= TELECHARGEMENT. "/carousel.png" ?>" alt="Produit 1" />
+                            <article>
+                                <h2>La terre</h2>
+                                <p>
+                                    Sa bonne taille crée une attraction
+                                    suffisante qui empêche la vapeur d’eau et
+                                    l’atmosphère de s’échapper dans l’espace et
+                                    qui nous protège des rayonnements
+                                    ultraviolets.La terre est un écosystème
+                                    géant. La terre est un ensemble d'êtres
+                                    vivants dans un environnement commun.Si un
+                                    écosystème est un milieu naturel ou
+                                    artificiel composé d'êtres vivants qui y
+                                    habitent, alors la terre est un écosystème
+                                    géant.
+                                </p>
+                            </article>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="container">
+                        <img class="img-block" src="<?= TELECHARGEMENT. "/carousel2.png" ?>" alt="Produit 1" />
+                            <article>
+                                <h2>La Température</h2>
+                                <p>
+                                    Son juste éloignement du Soleil maintient et
+                                    un effet de serre favorable qui permet de
+                                    maintenir l’eau sous sa forme liquide avec
+                                    ses pluies, ses rivières ses lacs et ses
+                                    océans, et établit une température moyenne
+                                    de 18° très favorable au développement de la
+                                    vie.
+                                </p>
+                            </article>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="container">
+                        <img class="img-block" src="<?= TELECHARGEMENT. "/carousel.png" ?>" alt="Produit 1" />
+                            <article>
+                                <h2>Renouvellement</h2>
+                                <p>
+                                    La Terre est aussi vivante sur le plan
+                                    géologique. La chaleur résiduelle qu’elle
+                                    renferme dans ses couches profondes permet
+                                    l’existence du volcanisme, du mouvement des
+                                    plaques tectoniques qui, en dépit des
+                                    tremblements de terres destructeurs, permet
+                                    à long terme le soulèvement de nouvelles
+                                    chaînes de montagne, crée de nouveau océans
+                                    et transforme lentement les contours des
+                                    continents.
+                                </p>
+                            </article>
+                        </div>
+                    </section>
                 </div>
-                <?php endforeach; ?>
-            </div>
-                    <!-- les boutons de navigations right / left -->
-                <iconify-icon class="precedent" id="arrows-left" icon="iconamoon:arrow-left-6-circle-duotone"  width="34" height="58" onmouseover="this.classList.add('icon-hover-color')" onmouseout="this.classList.remove('icon-hover-color')"></iconify-icon>
-                <iconify-icon class="suivant" id="arrows-right" icon="iconamoon:arrow-right-6-circle-duotone"  width="34" height="58" onmouseover="this.classList.add('icon-hover-color')" onmouseout="this.classList.remove('icon-hover-color')"></iconify-icon>
+                
+                <button
+                    class="bi bi-chevron-left"
+                    aria-label="Diapositive précedente"
+                ></button
+                ><button
+                    class="bi bi-chevron-right"
+                    aria-label="Diapositive suivante"
+                ></button>
+          
+        </div>
 
         </section>
 
 
-        <!-- les 3 boutons en dessous  -->
-        <div id="carousel-pagination" class="carousel-pagination">
-    <?php for ($i = 0; $i < count($imagePaths); $i++) : ?>
-        <button class="carousel-pagination-button custom-button" data-index="<?= $i ?>"></button>
-    <?php endfor; ?>
-        </div>
+</section>
+</body>
 
+
+
+
+
+      <div>
         <div class="ligne-container">
                 <div class="ligne-gauche"></div>
                 <h1>Mon titre</h1>
@@ -41,10 +104,7 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
 
 
         <section class="produit-populaire">
-            <div class="title">
-                <p>Produits populaires</p>
-                <a href="#">Voir tout</a>
-            </div>
+           
             <div class="nos-produits-populaire"> 
         <?php    
             $cpt=0;
@@ -60,9 +120,9 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                     <iconify-icon class="icon-cart" icon="iconoir:cart" width="24" height="24"></iconify-icon>
                 </button>
             </div>
-           
+            
 <?php
-if ($cpt == 4) {
+if ($cpt == 3) {
     break;
 }
 }
@@ -70,13 +130,11 @@ if ($cpt == 4) {
                     
             </div>
         </section>
+        </div>
 
 
         <section class="produit-populaire">
-            <div class="title">
-                <p>Les promotions</p>
-                <a href="#">Voir tout</a>
-            </div>
+           
             <div class="nos-produits-populaire"> 
         <?php    
             $cpt=0;
@@ -95,7 +153,7 @@ if ($cpt == 4) {
             </div>
            
 <?php
-if ($cpt == 4) {
+if ($cpt == 3) {
     break;
 }
 }
@@ -109,10 +167,9 @@ if ($cpt == 4) {
 
         <section class="produit-populaire">
             <div class="title">
-                <p>Les avis clients</p>
+                
                     <div class="fleche">
-                    <iconify-icon icon="iconamoon:arrow-left-2-thin" style="color: #B0B0B0;" width="30" height="30"></iconify-icon>
-                    <iconify-icon icon="iconamoon:arrow-right-2-thin" style="color: #B0B0B0;" width="30" height="30"></iconify-icon>
+                    
                     </div>
                     
             </div>
@@ -121,8 +178,65 @@ if ($cpt == 4) {
         
               
         </section>
-           
+        <div class="ligne-container">
+            <div class="ligne-gauche"></div>
+            <h1>Mon titre</h1>
+            <div class="ligne-droite"></div>
+        </div>
+        <section>
 
+        <div class="categorie">
+                <div class="produit">
+                    <img
+                        class="img-block"
+                        src="<?= TELECHARGEMENT. "/image 13.png" ?>"
+                        alt="Produit 3"
+                    />
+
+                    <button class="bouton">Cliquez ici</button>
+                </div>
+                <div class="produit">
+                    <img
+                        class="img-block"
+                         src="<?= TELECHARGEMENT. "/image 14.png" ?>"
+                        alt="Produit 3"
+                    />
+
+                    <button class="bouton">Cliquez ici</button>
+                </div>
+                <div class="produit">
+                    <img
+                        class="img-block"
+                        src="<?= TELECHARGEMENT. "/image12.png" ?>"
+                        alt="Produit 3"
+                    />
+
+                    <button class="bouton">Cliquez ici</button>
+                </div>
+            </div>
+        </section>
+        
+        <div class="before-footer">
+            <div class="produit">
+                <img
+                    class="img-blocko"
+                    src="./img/tabler_truck-delivery.png"
+                    alt="Produit 3"
+                />
+                <h2>Livraison gratuite</h2>
+                <a href="#" class="prixo">En savoir plus </a>
+            </div>
+            <div class="produit">
+
+
+            <img class="img-blocko" src="" alt="Produit 3">
+
+
+
+                <h2>Adaptez a tout style</h2>
+                <a href="#" class="prixo">En savoir plus </a>
+            </div>
+        </div>
 
 
 

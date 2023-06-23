@@ -54,7 +54,7 @@ if (!App::isadmin()) {
                     <td><?=$user["prenom"]?></td>
                     <td><img src="<?= TELECHARGEMENT. "user/". $user["pp"] ?>" id="picture-admin"></td>
                     <td><?=$user["pseudo"]?></td>
-                    <td><?=$user["password"]?></td>
+                    
                     <td><?=$user["adresse"]?></td>
                     <td><?=$user["numero"]?></td>
                     <td><?=$user["email"]?></td>

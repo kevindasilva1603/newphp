@@ -155,3 +155,5 @@ $quantity = App::calculerTotalPanier($panier);
         unset($_SESSION["message"]);
     }
 	?>
+
+
