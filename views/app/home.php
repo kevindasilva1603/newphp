@@ -177,7 +177,7 @@ if ($cpt == 3) {
                         alt="Produit 3"
                     />
 
-                    <button class="bouton">Cliquez ici</button>
+                    <button onclick="window.location.href='http://localhost:8888/Projet-ws/public/index.php/Produit?id=3'" class="bouton">Cliquez ici</button>
                 </div>
                 <div class="produit">
                     <img
@@ -195,7 +195,7 @@ if ($cpt == 3) {
                         alt="Produit 3"
                     />
 
-                    <button class="bouton">Cliquez ici</button>
+                    <button onclick="window.location.href='http://localhost:8888/Projet-ws/public/index.php/Produit?id=1'" class="bouton">Cliquez ici</button>
                 </div>
             </div>
         </section>
@@ -233,7 +233,5 @@ if ($cpt == 3) {
 <?php  
 
 include VIEWS.'inc/footer.php'; 
-if (isset($_SESSION['user'])) {
-    app::showArray($_SESSION['user']);
-}
+
 ?>
