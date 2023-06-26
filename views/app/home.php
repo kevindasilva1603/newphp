@@ -13,6 +13,12 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
         <div class="wrapper">
             
                 <div class="carousel">
+                <?php    
+            $cpt=0;
+            foreach ($allProduct as $tabprod) { 
+            $cpt++;
+            }
+        ?>
                     <section>
                         <div class="container">
                         <img class="img-block" src="<?= TELECHARGEMENT. "/carousel.png" ?>" alt="Produit 1" />
@@ -21,7 +27,7 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                                 <p class="sousprd">
                                 Les lunettes anti-lumière bleue "Daytona" sont un accessoire élégant et moderne conçu pour protéger vos yeux des effets nocifs de la lumière bleue émise par les écrans électroniques tels que les ordinateurs, les smartphones et les tablettes.
                                 </p>
-                                <button class="boutonsa">Voir Plus</button>
+                                <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier
                             </article>
                         </div>
                     </section>
@@ -33,7 +39,7 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                                 <p class="sousprd">
                                 Les lunettes anti-lumière bleue "Serenity" sont conçues pour vous offrir une tranquillité d'esprit visuelle dans notre monde numérique. Leur design élégant et contemporain s'associe harmonieusement à leur technologie de pointe pour vous offrir une expérience visuelle supérieure.
                                 </p>
-                                <button class="boutonsa">Voir Plus</button>
+                                <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier
                             </article>
                         </div>
                     </section>
@@ -45,7 +51,7 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                                 <p class="sousprd">
                                 Les lunettes anti-lumière bleue "LuminoGuard" sont les gardiennes de vos yeux dans l'ère numérique. Leur allure moderne et leur construction robuste en font des compagnons fiables pour votre confort visuel.
                                 </p>
-                                <button class="boutonsa">Voir Plus</button>
+                                <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier
                             </article>
                         </div>
                     </section>  

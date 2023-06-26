@@ -62,10 +62,7 @@ $quantity = App::calculerTotalPanier($panier);
 	          <a class="link-nav" href="<?=BASE_PATH. "Produit?id=".App::getRandomNumberFromArray($numbers) ?>">Produits</a>
 			  <!-- ajout produit avec différent id -->
 	        </li>	
-			<li class="item-nav">
-	          <a class="link-nav" href="<?=BASE_PATH. "commande" ?>">Mes commandes</a>
-			  <!-- ajout produit avec différent id -->
-	        </li>
+			
 
 						
 		</ul>
