@@ -198,6 +198,9 @@ iconify-icon {
 .img-box {
     display: flex;
     justify-content: center;
+    width: 248px;
+    height: 165px;
+    height: auto;
 }
 
 .title-h2 {
@@ -214,24 +217,6 @@ iconify-icon {
 }
 .h2-flex a {
     text-decoration: none;
-}
-
-.element-prd li a {
-    text-decoration: none;
-    text-align: left;
-    color: var(--secondary-bg-color);
-    font-size: 17px;
-    font-weight: 500;
-}
-.element-prd li p {
-    text-align: left;
-    color: var(--secondary-bg-color);
-    font-size: 17px;
-    font-weight: 500;
-}
-.element-prd img {
-    width: 225px;
-    height: 225px;
 }
 
 .sugestion {
@@ -612,12 +597,6 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     gap: 15px;
-}
-
-.produit img {
-    width: 248px;
-    height: 165px;
-    height: auto;
 }
 
 .produit h2 {
@@ -1245,6 +1224,8 @@ article > p {
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 400;
+    line-height: 23px;
+    font-style: oblique;
 }
 /* Style pour le panier d'achat */
 

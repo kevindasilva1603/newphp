@@ -6,7 +6,6 @@ $allProduct=Produit::showDb();
 $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECHARGEMENT . "produit/" . $allProduct[1]["photo"],TELECHARGEMENT . "produit/" . $allProduct[2]["photo"]);
 
 ?>
-
 <body>
     <main>
         <!-- le carousel  -->
@@ -20,7 +19,7 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                             <article>
                                 <h2>Daytona</h2>
                                 <p class="sousprd">
-                                Les lunettes anti-lumière bleue "Daytona" sont un accessoire élégant et moderne conçu pour protéger vos yeux des effets nocifs de la lumière bleue émise par les écrans électroniques tels que les ordinateurs, les smartphones et les tablettes. Avec leur design sophistiqué et leur technologie avancée, les lunettes "Daytona" offrent un mélange parfait de style et de fonctionnalité.
+                                Les lunettes anti-lumière bleue "Daytona" sont un accessoire élégant et moderne conçu pour protéger vos yeux des effets nocifs de la lumière bleue émise par les écrans électroniques tels que les ordinateurs, les smartphones et les tablettes.
                                 </p>
                                 <button class="boutonsa">Voir Plus</button>
                             </article>
@@ -81,51 +80,21 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
             </div>
 
 
-            <section class="produit-populaire">
-           
-           <div class="nos-produits-populaire"> 
-       <?php    
-           $cpt=0;
-           foreach ($allProduct as $tabprod) { 
-           $cpt++;
-       ?>
-           <div class="produit">
-               <li class="img-box"><a href="Produit_info?id=<?=$tabprod["id_montre"]?>"><img src="<?= TELECHARGEMENT. "produit/". $tabprod["photo"] ?>" alt="<?= $tabprod["titre"] ?>"></a></li>
-               <li><a class="h2t"  href="Produit_info?id=<?=$tabprod["id_montre"]?>"> <?= $tabprod["titre"]?> </a> </li>
-               <li class="price"><p class="prix-promo"><?= $tabprod["prix"]." €"?></p> </li>
-
-               <button class="bouton" onclick="window.location.href='panier?id=<?=$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>';">
-                   <iconify-icon class="icon-cart" icon="iconoir:cart" width="24" height="24"></iconify-icon>
-               </button>
-           </div>
-           
-<?php
-if ($cpt == 3) {
-   break;
-}
-}
-?>
-                   
-           </div>
-       </section>
-        </div>
-
-
         <section class="produit-populaire">
            
             <div class="nos-produits-populaire"> 
-        <?php    
+            <?php    
             $cpt=0;
-            shuffle($allProduct);
             foreach ($allProduct as $tabprod) { 
             $cpt++;
         ?>
             <div class="produit">
-                <li class="img-box"><a href="Produit_info?id=<?=$tabprod["id_montre"]?>"><img src="<?= TELECHARGEMENT. "produit/". $tabprod["photo"] ?>" alt="<?= $tabprod["titre"] ?>"></a></li>
-                <li><a class="h2t" href="Produit_info?id=<?=$tabprod["id_montre"]?>"> <?= $tabprod["titre"]?> </a> </li>
-                <li class="price"><p class="prix-promo"><?= $tabprod["prix"]." €"?></p> </li>
+                <li class="img-box"><a class="h2t" href="<?=BASE_PATH. "Produit_info?id=".$tabprod["id_montre"]?>"><img src="<?= TELECHARGEMENT. "produit/". $tabprod["photo"] ?>"  alt="<?= $tabprod["titre"] ?>"></a></li>
+                <li><a class="h2t" href="<?=BASE_PATH. "Produit_info?id=".$tabprod["id_montre"]?>"> <?= $tabprod["titre"]?> </a> </li>
+                
+                <li ><p class="price" ><?= $tabprod["prix"]." €"?></p></li>
 
-                <button class="bouton" onclick="window.location.href='panier?id=<?=$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>';">
+                <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">
                     <iconify-icon class="icon-cart" icon="iconoir:cart" width="24" height="24"></iconify-icon>
                 </button>
             </div>
@@ -137,8 +106,39 @@ if ($cpt == 3) {
 }
 ?>
                     
-    </div>
-</section>
+            </div>
+        </section>
+        </div>
+
+
+        <section class="produit-populaire">
+           
+            <div class="nos-produits-populaire"> 
+            <?php    
+            $cpt=0;
+            foreach ($allProduct as $tabprod) { 
+            $cpt++;
+        ?>
+            <div class="produit">
+                <li class="img-box"><a class="h2t" href="<?=BASE_PATH. "Produit_info?id=".$tabprod["id_montre"]?>"><img src="<?= TELECHARGEMENT. "produit/". $tabprod["photo"] ?>"  alt="<?= $tabprod["titre"] ?>"></a></li>
+                <li><a class="h2t" href="<?=BASE_PATH. "Produit_info?id=".$tabprod["id_montre"]?>"> <?= $tabprod["titre"]?> </a> </li>
+                
+                <li ><p class="price" ><?= $tabprod["prix"]." €"?></p></li>
+
+                <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">
+                    <iconify-icon class="icon-cart" icon="iconoir:cart" width="24" height="24"></iconify-icon>
+                </button>
+            </div>
+           
+<?php
+if ($cpt == 3) {
+    break;
+}
+}
+?>
+                    
+            </div>
+        </section>
 
 
 
@@ -207,7 +207,7 @@ if ($cpt == 3) {
             <div class="produit">
 
 
-            <img class="blockos" src="<?= TELECHARGEMENT. "/fluent.png" ?>"alt="Produit 3">
+            <img class="blockos" src="<?= TELECHARGEMENT. "/glop.png" ?>"alt="Produit 3">
 
 
 
