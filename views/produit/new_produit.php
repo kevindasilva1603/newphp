@@ -62,4 +62,4 @@ include VIEWS.'inc/header.php';
 
 </form>
 
-<?php  include VIEWS.'inc/footer.php'; ?>
+<?php  include VIEWS.'inc/footer.php'; ?>	

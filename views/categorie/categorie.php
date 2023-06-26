@@ -6,28 +6,25 @@ $breadcrumb = App::getBreadcrumbData($_SERVER['REQUEST_URI']);
 unset($breadcrumb['Catégorie']);
 unset($breadcrumb['Produits']);
 	 // Début du fil d'Ariane
-	 echo '<ul class="breadcrumb">';
-
-	 // Parcours des éléments du fil d'Ariane
+	 echo '<ul class="file-ariane">';
+	 $count = count($breadcrumb);
+	 $current = 0;
 	 foreach ($breadcrumb as $title => $url) {
-		 // Lien actif (dernier élément du fil d'Ariane)
-		 if ($url == '#') {
-			 echo '<li class="active">' . $title . '</li>';
-		 }
-		 // Liens normaux
-		 else {
-			 echo '<li><a href="' . $url . '">' . $title . '</a></li>';
-		 }
+
+		$current++;
+
+		echo '<li><a href="' . $url . '">' . $title . '</a></li>';
+	
+		if ($current < $count) {
+			echo '<iconify-icon icon="ep:arrow-right" style="color: black;" width="18" height="18"></iconify-icon>';
+		}
+		 
 	 }
 
-	 // Fin du fil d'Ariane
 	 echo '</ul>';
 ?>
-          <h1 class="">Catalogue</h1>  
-        <main class="categorie">
-  
 
-
+	<main class="categorie">
 
 <?php for ($i=0; $i < count($allcategorie) ; $i++) { ?>    
 

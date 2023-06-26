@@ -37,10 +37,6 @@ const carouselContainer = document.querySelector(".carousel");
 const carouselItems = document.querySelectorAll(".carousel > section");
 const body = document.querySelector("body");
 const sections = document.querySelectorAll("section");
-const allIndicators = document.querySelectorAll(
-    ".carousel-indicators > .indicator"
-);
-
 const carouselLength = carouselItems.length;
 let index = 0;
 
@@ -52,10 +48,10 @@ const setUi = () => {
     allIndicators[index].classList.add("active");
 
     if (index === 0) previousButton.style.display = "none";
-    else previousButton.style.display = "grid";
+    else previousButton.style.display = "flex";
 
     if (index === carouselLength - 1) nextButton.style.display = "none";
-    else nextButton.style.display = "grid";
+    else nextButton.style.display = "flex";
 
     const section = sections[index];
     const sectionComputedStyle = window.getComputedStyle(section);

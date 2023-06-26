@@ -18,20 +18,11 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                         <div class="container">
                         <img class="img-block" src="<?= TELECHARGEMENT. "/carousel.png" ?>" alt="Produit 1" />
                             <article>
-                                <h2>La terre</h2>
-                                <p>
-                                    Sa bonne taille crée une attraction
-                                    suffisante qui empêche la vapeur d’eau et
-                                    l’atmosphère de s’échapper dans l’espace et
-                                    qui nous protège des rayonnements
-                                    ultraviolets.La terre est un écosystème
-                                    géant. La terre est un ensemble d'êtres
-                                    vivants dans un environnement commun.Si un
-                                    écosystème est un milieu naturel ou
-                                    artificiel composé d'êtres vivants qui y
-                                    habitent, alors la terre est un écosystème
-                                    géant.
+                                <h2>Daytona</h2>
+                                <p class="sousprd">
+                                Les lunettes anti-lumière bleue "Daytona" sont un accessoire élégant et moderne conçu pour protéger vos yeux des effets nocifs de la lumière bleue émise par les écrans électroniques tels que les ordinateurs, les smartphones et les tablettes. Avec leur design sophistiqué et leur technologie avancée, les lunettes "Daytona" offrent un mélange parfait de style et de fonctionnalité.
                                 </p>
+                                <button class="boutonsa">Voir Plus</button>
                             </article>
                         </div>
                     </section>
@@ -39,16 +30,11 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                         <div class="container">
                         <img class="img-block" src="<?= TELECHARGEMENT. "/carousel2.png" ?>" alt="Produit 1" />
                             <article>
-                                <h2>La Température</h2>
-                                <p>
-                                    Son juste éloignement du Soleil maintient et
-                                    un effet de serre favorable qui permet de
-                                    maintenir l’eau sous sa forme liquide avec
-                                    ses pluies, ses rivières ses lacs et ses
-                                    océans, et établit une température moyenne
-                                    de 18° très favorable au développement de la
-                                    vie.
+                                <h2>Serenity</h2>
+                                <p class="sousprd">
+                                Les lunettes anti-lumière bleue "Serenity" sont conçues pour vous offrir une tranquillité d'esprit visuelle dans notre monde numérique. Leur design élégant et contemporain s'associe harmonieusement à leur technologie de pointe pour vous offrir une expérience visuelle supérieure.
                                 </p>
+                                <button class="boutonsa">Voir Plus</button>
                             </article>
                         </div>
                     </section>
@@ -56,24 +42,16 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                         <div class="container">
                         <img class="img-block" src="<?= TELECHARGEMENT. "/carousel.png" ?>" alt="Produit 1" />
                             <article>
-                                <h2>Renouvellement</h2>
-                                <p>
-                                    La Terre est aussi vivante sur le plan
-                                    géologique. La chaleur résiduelle qu’elle
-                                    renferme dans ses couches profondes permet
-                                    l’existence du volcanisme, du mouvement des
-                                    plaques tectoniques qui, en dépit des
-                                    tremblements de terres destructeurs, permet
-                                    à long terme le soulèvement de nouvelles
-                                    chaînes de montagne, crée de nouveau océans
-                                    et transforme lentement les contours des
-                                    continents.
+                                <h2>LuminoGuard</h2>
+                                <p class="sousprd">
+                                Les lunettes anti-lumière bleue "LuminoGuard" sont les gardiennes de vos yeux dans l'ère numérique. Leur allure moderne et leur construction robuste en font des compagnons fiables pour votre confort visuel.
                                 </p>
+                                <button class="boutonsa">Voir Plus</button>
                             </article>
                         </div>
-                    </section>
+                    </section>  
                 </div>
-                
+                <div class="myboutons">
                 <button
                     class="bi bi-chevron-left"
                     aria-label="Diapositive précedente"
@@ -82,7 +60,7 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                     class="bi bi-chevron-right"
                     aria-label="Diapositive suivante"
                 ></button>
-          
+                </div>
         </div>
 
         </section>
@@ -103,33 +81,33 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
             </div>
 
 
-        <section class="produit-populaire">
+            <section class="produit-populaire">
            
-            <div class="nos-produits-populaire"> 
-        <?php    
-            $cpt=0;
-            foreach ($allProduct as $tabprod) { 
-            $cpt++;
-        ?>
-            <div class="produit">
-                <li class="img-box"><a href="Produit_info?id=<?=$tabprod["id_montre"]?>"><img src="<?= TELECHARGEMENT. "produit/". $tabprod["photo"] ?>" alt="<?= $tabprod["titre"] ?>"></a></li>
-                <li><a class="h2t"  href="Produit_info?id=<?=$tabprod["id_montre"]?>"> <?= $tabprod["titre"]?> </a> </li>
-                <li class="price"><p class="prix-promo"><?= $tabprod["prix"]." €"?></p> </li>
+           <div class="nos-produits-populaire"> 
+       <?php    
+           $cpt=0;
+           foreach ($allProduct as $tabprod) { 
+           $cpt++;
+       ?>
+           <div class="produit">
+               <li class="img-box"><a href="Produit_info?id=<?=$tabprod["id_montre"]?>"><img src="<?= TELECHARGEMENT. "produit/". $tabprod["photo"] ?>" alt="<?= $tabprod["titre"] ?>"></a></li>
+               <li><a class="h2t"  href="Produit_info?id=<?=$tabprod["id_montre"]?>"> <?= $tabprod["titre"]?> </a> </li>
+               <li class="price"><p class="prix-promo"><?= $tabprod["prix"]." €"?></p> </li>
 
-                <button class="bouton" onclick="window.location.href='panier?id=<?=$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>';">
-                    <iconify-icon class="icon-cart" icon="iconoir:cart" width="24" height="24"></iconify-icon>
-                </button>
-            </div>
-            
+               <button class="bouton" onclick="window.location.href='panier?id=<?=$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>';">
+                   <iconify-icon class="icon-cart" icon="iconoir:cart" width="24" height="24"></iconify-icon>
+               </button>
+           </div>
+           
 <?php
 if ($cpt == 3) {
-    break;
+   break;
 }
 }
 ?>
-                    
-            </div>
-        </section>
+                   
+           </div>
+       </section>
         </div>
 
 
@@ -220,7 +198,7 @@ if ($cpt == 3) {
             <div class="produit">
                 <img
                     class="img-blocko"
-                    src="./img/tabler_truck-delivery.png"
+                    src="<?= TELECHARGEMENT. "/truck.png" ?>"
                     alt="Produit 3"
                 />
                 <h2>Livraison gratuite</h2>
@@ -229,7 +207,7 @@ if ($cpt == 3) {
             <div class="produit">
 
 
-            <img class="img-blocko" src="" alt="Produit 3">
+            <img class="blockos" src="<?= TELECHARGEMENT. "/fluent.png" ?>"alt="Produit 3">
 
 
 

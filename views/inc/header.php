@@ -33,7 +33,7 @@ $quantity = App::calculerTotalPanier($panier);
 	<!-- Javascript -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>	
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 	<script src="<?= ASSETS. "js/main.js"?>" defer></script>
 	<script src="<?= ASSETS. "js/swiper.js"?>" defer></script>
@@ -49,18 +49,25 @@ $quantity = App::calculerTotalPanier($panier);
 		  </div>
 
 			<!-- 2EME BOITE -->
-		<ul id="flex-mid">
+			<ul id="flex-mid">
 			<!-- -->
 	        <li class="item-nav">
-	          <a class="link-nav" aria-current="page" href="&emsp;">Accueil</a>
+	          <a class="link-nav" aria-current="page" href="<?=CONFIG['app']['projectBaseUrl']."public"?>">Accueil</a>
 	        </li>
 			<li class="item-nav">
-	          <a class="link-nav" href="Categorie">Catégories</a><iconify-icon icon="ep:arrow-down" width="24" height="24"></iconify-icon>
+	          <a class="link-nav" href="<?=BASE_PATH. "Categorie" ?>">Catégories</a><iconify-icon icon="ep:arrow-down" width="24" height="24"></iconify-icon>
 	        </li>
+			<?php $numbers = array(2, 6, 7); ?>
 			<li class="item-nav">
-	          <a class="link-nav" href="Categorie">Produits</a><iconify-icon icon="ep:arrow-down" width="24" height="24"></iconify-icon>
+	          <a class="link-nav" href="<?=BASE_PATH. "Produit?id=".App::getRandomNumberFromArray($numbers) ?>">Produits</a>
 			  <!-- ajout produit avec différent id -->
-	        </li>				
+	        </li>	
+			<li class="item-nav">
+	          <a class="link-nav" href="<?=BASE_PATH. "commande" ?>">Mes commandes</a>
+			  <!-- ajout produit avec différent id -->
+	        </li>
+
+						
 		</ul>
 			
 
@@ -69,13 +76,13 @@ $quantity = App::calculerTotalPanier($panier);
 			if ($admin=='false') {
 			?>
 	        <li>
-	          <a href="administration">ADMIN_Administration</a>
+	          <a href="<?=BASE_PATH. "administration" ?>">ADMIN_Administration</a>
 	        </li>
 	        <li>
-	          <a href="categorie">ADMIN_Categorie</a>
+	          <a href="<?=BASE_PATH. "categorie" ?>">ADMIN_Categorie</a>
 	        </li>
 	        <li>
-	          <a href="produit">ADMIN_Produit</a>
+	          <a href="<?=BASE_PATH. "produit" ?>">ADMIN_Produit</a>
 	        </li>
 			<?php	
 			}
@@ -86,13 +93,14 @@ $quantity = App::calculerTotalPanier($panier);
 			<?php
 			if ($connected=='false') {
 			?>
-									<!-- gestion du profil  -->
-
+									<!-- gestion du panier et profil  -->
+			
 <div class="outils">
 
 		<ul id="panier">
 			<li class="item-nav">
-			<a href="list_panier">
+
+			<a href="<?=BASE_PATH. "list_panier" ?>">
 			<iconify-icon icon="iconoir:cart" style="color: white;" width="24" height="24"></iconify-icon>
 			<span id="panier-badge"><?= $quantity?></span>
 			</a>
@@ -104,17 +112,17 @@ $quantity = App::calculerTotalPanier($panier);
 		<ul id="user">
 
 			<li class="item-nav">
-<a class="link-nav" href="mon-profil?id=<?=$_SESSION['user']['id_user'] ?>"><img src="<?= TELECHARGEMENT. "user/". $_SESSION['user']['pp'] ?>" class="rounded-circle img-fluid" id="picture-profil" alt="profil-picture" ></a>
+			
+<a class="link-nav" href="<?=BASE_PATH. "mon-profil?id=".$_SESSION['user']['id_user']?>"><img src="<?= TELECHARGEMENT. "user/". $_SESSION['user']['pp'] ?>" class="rounded-circle img-fluid" id="picture-profil" alt="profil-picture" ></a>
 			</li>	
 
 			<li class="item-nav">
-				<a class="link-nav" href="mon-profil?id=<?=$_SESSION['user']['id_user'] ?>">
+				<a class="link-nav" href="<?=BASE_PATH. "mon-profil?id=".$_SESSION['user']['id_user']?>">
 					<span> <?=!empty($_SESSION['user']['pseudo']) ? $_SESSION['user']['pseudo'] : "";?> </span> 
 				</a>
 	        </li>		
 			<li class="item-nav">  
-			<a class="link-nav" href="<?= BASE_PATH ?>deconnexion">Se déconnecter</a>
-
+	          <a class="link-nav" href="<?=BASE_PATH. "deconnexion" ?>">Se deconnecter</a> 
 	        </li>	
 		</ul>
 </div>
@@ -132,12 +140,10 @@ $quantity = App::calculerTotalPanier($panier);
 			?>
 			<ul id="guest">
 				<li class="item-nav">
-				<iconify-icon icon="ph:user" width="24" height="24"></iconify-icon><a class="link-nav" href="<?= BASE_PATH ?>connection">Se connecter</a>
-
-
+				<iconify-icon icon="ph:user" width="24" height="24"></iconify-icon><a class="link-nav" href="<?=BASE_PATH. "connection" ?>">Se connecter</a>
+				</li>
 				<li class="item-nav">
-				<a class="link-nav" href="<?= BASE_PATH ?>inscription">S'enregistrer</a>
-
+					<a class="link-nav" href="<?=BASE_PATH. "inscription" ?>">S'enregistrer</a> 
 				</li>
 			</ul>
 			<?php	
@@ -145,8 +151,7 @@ $quantity = App::calculerTotalPanier($panier);
 			?>
 
 
-	
-
+	</nav>
 	</header>
 <?php
 //session message
@@ -155,5 +160,7 @@ $quantity = App::calculerTotalPanier($panier);
         unset($_SESSION["message"]);
     }
 	?>
+	
+	<?= isset($_SESSION["message"]) ? $_SESSION["message"] : ""; 
 
-
+			$_SESSION["message"] = ""; ?>

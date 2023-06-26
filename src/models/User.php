@@ -12,11 +12,13 @@ class User extends Db
 	private $address;
 	private $numero;
 	private $date_creation; //
+	private $statut;
 
 	public function createFromPost(array $dataFromPost)
 	{
 		$this->setFirstName($dataFromPost["nom"]);
 		$this->setLastName($dataFromPost["prenom"]);
+		$this->setStatut(0); // Utilisateur normal par défaut
 
 
 		if (!empty($_FILES['pp']['name'])) {
@@ -467,6 +469,24 @@ class User extends Db
 	public function setPp($pp)
 	{
 		$this->pp = $pp;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of statut
+	 */
+	public function getStatut()
+	{
+		return $this->statut;
+	}
+
+	/**
+	 * Set the value of statut
+	 */
+	public function setStatut($statut): self
+	{
+		$this->statut = $statut;
 
 		return $this;
 	}
