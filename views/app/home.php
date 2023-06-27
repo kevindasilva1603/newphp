@@ -1,87 +1,77 @@
 <?php  
-$title = "Synkro";
+$title = "Optical Safety";
 include VIEWS.'inc/header.php'; 
 $allProduct=Produit::showDb();
 
 $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECHARGEMENT . "produit/" . $allProduct[1]["photo"],TELECHARGEMENT . "produit/" . $allProduct[2]["photo"]);
 
-?>
-<body>
-    <main>
-        <!-- le carousel  -->
-        <section class="car">
+?><body>
+<main>
+    <!-- le carousel  -->
+    <section class="car">
         <div class="wrapper">
-            
-                <div class="carousel">
-                <?php    
-            $cpt=0;
-            foreach ($allProduct as $tabprod) { 
-            $cpt++;
-            }
-        ?>
-                    <section>
-                        <div class="container">
-                        <img class="img-block" src="<?= TELECHARGEMENT. "/carousel.png" ?>" alt="Produit 1" />
-                            <article>
-                                <h2>Daytona</h2>
-                                <p class="sousprd">
+            <div class="carousel">
+            <?php    
+                $cpt = 0;
+                foreach ($allProduct as $tabprod) { 
+                    $cpt++;
+            ?>
+                <section>
+                    <div class="container">
+                        <img class="img-block" src="<?= TELECHARGEMENT . "/carousel.png" ?>" alt="Produit 1" />
+                        <article>
+                            <h2>Daytona</h2>
+                            <p class="sousprd">
                                 Les lunettes anti-lumière bleue "Daytona" sont un accessoire élégant et moderne conçu pour protéger vos yeux des effets nocifs de la lumière bleue émise par les écrans électroniques tels que les ordinateurs, les smartphones et les tablettes.
-                                </p>
-                                <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier
-                            </article>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="container">
-                        <img class="img-block" src="<?= TELECHARGEMENT. "/carousel2.png" ?>" alt="Produit 1" />
-                            <article>
-                                <h2>Serenity</h2>
-                                <p class="sousprd">
+                            </p>
+                            <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier</button>
+                        </article>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <img class="img-block" src="<?= TELECHARGEMENT . "/carousel2.png" ?>" alt="Produit 1" />
+                        <article>
+                            <h2>Serenity</h2>
+                            <p class="sousprd">
                                 Les lunettes anti-lumière bleue "Serenity" sont conçues pour vous offrir une tranquillité d'esprit visuelle dans notre monde numérique. Leur design élégant et contemporain s'associe harmonieusement à leur technologie de pointe pour vous offrir une expérience visuelle supérieure.
-                                </p>
-                                <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier
-                            </article>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="container">
-                        <img class="img-block" src="<?= TELECHARGEMENT. "/carousel.png" ?>" alt="Produit 1" />
-                            <article>
-                                <h2>LuminoGuard</h2>
-                                <p class="sousprd">
+                            </p>
+                            <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier</button>
+                        </article>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <img class="img-block" src="<?= TELECHARGEMENT . "/carousel.png" ?>" alt="Produit 1" />
+                        <article>
+                            <h2>LuminoGuard</h2>
+                            <p class="sousprd">
                                 Les lunettes anti-lumière bleue "LuminoGuard" sont les gardiennes de vos yeux dans l'ère numérique. Leur allure moderne et leur construction robuste en font des compagnons fiables pour votre confort visuel.
-                                </p>
-                                <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier
-                            </article>
-                        </div>
-                    </section>  
-                </div>
-                <div class="myboutons">
-                <button
-                    class="bi bi-chevron-left"
-                    aria-label="Diapositive précedente"
-                ></button
-                ><button
-                    class="bi bi-chevron-right"
-                    aria-label="Diapositive suivante"
-                ></button>
-                </div>
+                            </p>
+                            <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">Ajouter au panier</button>
+                        </article>
+                    </div>
+                </section>  
+            <?php } ?>
+            </div>
+            <div class="myboutons">
+                <button class="bi bi-chevron-left" aria-label="Diapositive précédente"></button>
+                <button class="bi bi-chevron-right" aria-label="Diapositive suivante"></button>
+            </div>
         </div>
-
-        </section>
-
-
-</section>
+    </section>
+</main>
 </body>
 
 
 
 
 
-      <div>
+
+      <div class="home">
         <div class="ligne-container">
                 <div class="ligne-gauche"></div>
-                <h1>Mon titre</h1>
+                <h1>Tendances</h1>
                 <div class="ligne-droite"></div>
             </div>
 
@@ -98,7 +88,7 @@ $imagePaths = array(TELECHARGEMENT . "produit/" . $allProduct[0]["photo"],TELECH
                 <li class="img-box"><a class="h2t" href="<?=BASE_PATH. "Produit_info?id=".$tabprod["id_montre"]?>"><img src="<?= TELECHARGEMENT. "produit/". $tabprod["photo"] ?>"  alt="<?= $tabprod["titre"] ?>"></a></li>
                 <li><a class="h2t" href="<?=BASE_PATH. "Produit_info?id=".$tabprod["id_montre"]?>"> <?= $tabprod["titre"]?> </a> </li>
                 
-                <li ><p class="price" ><?= $tabprod["prix"]." €"?></p></li>
+                <li ><p class="prix-promo" ><?= $tabprod["prix"]." €"?></p></li>
 
                 <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">
                     <iconify-icon class="icon-cart" icon="iconoir:cart" width="24" height="24"></iconify-icon>
@@ -129,7 +119,7 @@ if ($cpt == 3) {
                 <li class="img-box"><a class="h2t" href="<?=BASE_PATH. "Produit_info?id=".$tabprod["id_montre"]?>"><img src="<?= TELECHARGEMENT. "produit/". $tabprod["photo"] ?>"  alt="<?= $tabprod["titre"] ?>"></a></li>
                 <li><a class="h2t" href="<?=BASE_PATH. "Produit_info?id=".$tabprod["id_montre"]?>"> <?= $tabprod["titre"]?> </a> </li>
                 
-                <li ><p class="price" ><?= $tabprod["prix"]." €"?></p></li>
+                <li ><p class="prix-promo" ><?= $tabprod["prix"]." €"?></p></li>
 
                 <button class="bouton" onclick="window.location.href='<?=BASE_PATH.'panier?id='.$tabprod['id_montre']?>&cat=<?=$tabprod['categorie_id']?>&p=home';">
                     <iconify-icon class="icon-cart" icon="iconoir:cart" width="24" height="24"></iconify-icon>
@@ -164,7 +154,7 @@ if ($cpt == 3) {
         </section>
         <div class="ligne-container">
             <div class="ligne-gauche"></div>
-            <h1>Mon titre</h1>
+            <h1>Catégories</h1>
             <div class="ligne-droite"></div>
         </div>
         <section>

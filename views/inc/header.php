@@ -35,6 +35,7 @@ $quantity = App::calculerTotalPanier($panier);
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>	
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+	<script src="https://kit.fontawesome.com/6f0738803e.js" crossorigin="anonymous"></script>
 	<script src="<?= ASSETS. "js/main.js"?>" defer></script>
 	<script src="<?= ASSETS. "js/swiper.js"?>" defer></script>
 
@@ -55,7 +56,7 @@ $quantity = App::calculerTotalPanier($panier);
 	          <a class="link-nav" aria-current="page" href="<?=CONFIG['app']['projectBaseUrl']."public"?>">Accueil</a>
 	        </li>
 			<li class="item-nav">
-	          <a class="link-nav" href="<?=BASE_PATH. "Categorie" ?>">Catégories</a><iconify-icon icon="ep:arrow-down" width="24" height="24"></iconify-icon>
+	          <a class="link-nav" href="<?=BASE_PATH. "Categorie" ?>">Catégories</a>
 	        </li>
 			<?php $numbers = array(2, 6, 7); ?>
 			<li class="item-nav">
@@ -128,11 +129,7 @@ $quantity = App::calculerTotalPanier($panier);
 			}
 			?>
 
-			<!-- 3ER BOITE bis-->
-
-			<!-- incription / connection -->
-
-			<?php
+<?php
 			if (!$connected=='false') {
 			?>
 			<ul id="guest">
@@ -146,6 +143,14 @@ $quantity = App::calculerTotalPanier($panier);
 			<?php	
 			}
 			?>
+
+
+
+			<!-- 3ER BOITE bis-->
+
+			<!-- incription / connection -->
+
+
 
 
 	</nav>

@@ -12,7 +12,7 @@ switch ($id) {
         $h1 = 'Homme';
         break;
     case '2':
-        $h1 = 'Montre de Sport';
+        $h1 = 'Enfant';
         break;
     case '3':
         $h1 = 'Femme';
@@ -26,7 +26,7 @@ switch ($id) {
 
 <body>
     
-    <h1 class="title-h1"><?= $h1 ?></h1>
+    <h1 class="title-h1"><?= $h1 ?> Catégorie</h1>
     
     <main><div class="nos-produits">
     <?php    
@@ -45,10 +45,72 @@ switch ($id) {
         }
     }
     ?>
-</div>
 
 
+</main>
+
+<div class="ligne-container">
+            <div class="ligne-gauche"></div>
+            <h1>Catégories</h1>
+            <div class="ligne-droite"></div>
+        </div>
+        <section>
+
+        <div class="categorie">
+                <div class="produit">
+                    <img
+                        class="img-block"
+                        src="<?= TELECHARGEMENT. "/image 13.png" ?>"
+                        alt="Produit 3"
+                    />
+
+                    <button onclick="window.location.href='http://localhost:8888/Projet-ws/public/index.php/Produit?id=3'" class="bouton">Cliquez ici</button>
+                </div>
+                <div class="produit">
+                    <img
+                        class="img-block"
+                         src="<?= TELECHARGEMENT. "/image 14.png" ?>"
+                        alt="Produit 3"
+                    />
+
+                    <button class="bouton">Cliquez ici</button>
+                </div>
+                <div class="produit">
+                    <img
+                        class="img-block"
+                        src="<?= TELECHARGEMENT. "/image12.png" ?>"
+                        alt="Produit 3"
+                    />
+
+                    <button onclick="window.location.href='http://localhost:8888/Projet-ws/public/index.php/Produit?id=1'" class="bouton">Cliquez ici</button>
+                </div>
+            </div>
+        </section>
         
-    </main>
+        <div class="before-footer">
+            <div class="produit">
+                <img
+                    class="img-blocko"
+                    src="<?= TELECHARGEMENT. "/truck.png" ?>"
+                    alt="Produit 3"
+                />
+                <h2>Livraison gratuite</h2>
+                <a href="#" class="prixo">En savoir plus </a>
+            </div>
+            <div class="produit">
+
+
+            <img class="blockos" src="<?= TELECHARGEMENT. "/glop.png" ?>"alt="Produit 3">
+
+
+
+                <h2>Adaptez a tout style</h2>
+                <a href="#" class="prixo">En savoir plus </a>
+            </div>
+        </div>
+
+
+
+
 
 <?php  include VIEWS.'inc/footer.php'; ?>

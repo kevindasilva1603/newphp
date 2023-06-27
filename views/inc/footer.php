@@ -31,20 +31,19 @@
             <li><a href="#">Assistance</a></li>
             <li><a href="#">Avis</a></li>
         </ul>
+        <ul class="Plan">
+            
+            <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Qui sommes nous ?</a></li>
+            <li><a href="#">Mention légales</a></li>
+            <li><a href="#">CGV</a></li>
+
+            </ul>
+    
+        </ul>
     </div>
     
-    <div class="footer-bottom">
-        
-        <ul>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Qui sommes nous ?</a></li>
-        <li><a href="#">Mention légales</a></li>
-        <li><a href="#">CGV</a></li>
-        <li><a href="#">Copyright</a></li>
-        <li><a href="#">Newsletter</a></li>
-        </ul>
-
-    </div>
     
 </footer>
 </html>
